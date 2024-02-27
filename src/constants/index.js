@@ -50,6 +50,33 @@ export const statistics = [
   { value: "250k+", label: "Customers" },
 ];
 
+export const popularproducts = [
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-01",
+    price: "$200.20",
+    rating: 4.3,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-10",
+    price: "$210.20",
+    rating: 3.3,
+  },
+  {
+    imgURL: shoe6,
+    name: "Nike Air Jordan-100",
+    price: "$220.20",
+    rating: 4,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    rating: 3.9,
+  },
+];
+
 export const products = [
   {
     imgURL: shoe4,
@@ -72,6 +99,54 @@ export const products = [
   {
     imgURL: shoe7,
     name: "Nike Air Jordan-001",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe6,
+    name: "Air Force 1",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Air Jordan",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Cortez",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe5,
+    name: "Nike Air Jordan-001",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe7,
+    name: "Nike Waffle Racer",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe6,
+    name: "Air Force 1",
+    price: "$230.20",
+    rating: 3.9,
+  },
+  {
+    imgURL: shoe4,
+    name: "Air Max 1",
     price: "$230.20",
     rating: 3.9,
   },
