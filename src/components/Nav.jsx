@@ -2,15 +2,11 @@ import { headerLogo } from "../assets/images";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 function Nav() {
   const [hamClick, setHamClick] = useState(false);
-
-  const handleHamClick = () => {
-    console.log("open");
-  };
 
   return (
     <header
