@@ -3,7 +3,7 @@ import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Nav() {
   return (
     <header
@@ -11,13 +11,13 @@ function Nav() {
     "
     >
       <nav className="flex justify-between items-center max-container">
-        <a href="/">
+        <Link to="/">
           <img src={headerLogo} alt="headerlogo" width={130} height={29} />
-        </a>
+        </Link>
         <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              <Link
+              <NavLink
                 to={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray hover:text-coral-red"
               >
@@ -29,7 +29,7 @@ function Nav() {
                 ) : (
                   item.label
                 )}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
