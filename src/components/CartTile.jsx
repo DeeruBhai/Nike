@@ -12,7 +12,7 @@ function CartTile({ cartItem }) {
   };
   return (
     <>
-      <div className="flex items-center p-5 justify-between mt-2 rounded-xl ">
+      <div className="flex items-center p-5 justify-between mt-2 rounded-xl w-full">
         <div className="flex p-3">
           <img
             src={cartItem.imgURL}

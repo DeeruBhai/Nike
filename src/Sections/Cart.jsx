@@ -21,8 +21,8 @@ function Cart() {
       <main className="mt-2">
         <section className="flex max-container max-sm:mt-12 justify-center">
           {cart && cart.length ? (
-            <div className="flex space-between justify-center items-center gap-12 mt-16 ">
-              <div className="min-h-[80vh] grid md:grid-cols-1 max-w-6xl mx-auto mt-16 justify-center items-center overflow-hidden">
+            <div className="flex max-sm:flex-col space-between max-sm:space-y-2 justify-center items-center gap-12 max-sm:gap-0 mt-16 ">
+              <div className="min-h-[80vh] max-sm:min-h-[60vh] grid md:grid-cols-1 max-w-6xl mx-auto mt-16 justify-center items-center overflow-hidden">
                 <div
                   id="cartflex"
                   className="flex flex-col justify-center items-center p-3  overflow-auto"
@@ -32,7 +32,7 @@ function Cart() {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center p-5 space-y-4 mt-14 ">
+              <div className="flex flex-col justify-center items-center p-5 space-y-4 mt-14 max-sm:mt-8">
                 <h1 className="font-bold text-lg text-coral-red font-palanquin ">
                   {" "}
                   Your Cart Summary
