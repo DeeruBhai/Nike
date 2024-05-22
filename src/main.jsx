@@ -8,11 +8,13 @@ import Cart from "./Sections/Cart.jsx";
 import Products from "./Sections/Products.jsx";
 import { Provider } from "react-redux";
 import store from "./Store/index.js";
+import Signup from "./Sections/Signup.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <ErrorPage /> },
   { path: "/cart", element: <Cart />, errorElement: <ErrorPage /> },
   { path: "/products", element: <Products />, errorElement: <ErrorPage /> },
+  { path: "/signup", element: <Signup />, errorElement: <ErrorPage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
