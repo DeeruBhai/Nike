@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import createUser from "../firebase/firebaseFunctions";
+import createUser from "../fb/firebaseFunctions";
 
 function Signup() {
   const [email, setEmail] = useState();
   const [pass, setpass] = useState();
+  const [Uname, setUname] = useState();
   const handlesignup = async (e) => {
     e.preventDefault();
-    const res = await createUser(email, pass);
-    console.log("----", res);
+    const createRes = await createUser(email, pass, Uname);
+    console.log("Signed up", createRes);
   };
   return (
     <>
@@ -26,6 +27,13 @@ function Signup() {
           name="pass"
           onChange={(e) => {
             setpass(e.target.value);
+          }}
+        />
+        <input
+          type="text"
+          name="uname"
+          onChange={(e) => {
+            setUname(e.target.value);
           }}
         />
         <button>signup</button>
