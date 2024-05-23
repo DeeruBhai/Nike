@@ -57,6 +57,12 @@ function Login() {
           </div>
           <button className="rounded-xl bg-coral-red py-1">Login</button>
         </form>
+        <div className="flex flex-row gap-1">
+          Dont have account?{" "}
+          <div onClick={() => navigate("/signup")} className="text-blue-800">
+            Register
+          </div>
+        </div>
       </div>
     </div>
   );

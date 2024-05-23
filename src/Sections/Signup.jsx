@@ -11,7 +11,8 @@ function Signup() {
   const handlesignup = async (e) => {
     e.preventDefault();
     const createRes = await createUser(email, pass, Uname);
-    if (createRes != null) {
+    console.log("---", createRes);
+    if (createRes == null) {
       navigate("/login");
       console.log("Signed up", createRes);
     } else {

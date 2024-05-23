@@ -53,4 +53,22 @@ const InsertDataWithUid = async (collectionName, data, uid) => {
     return error;
   }
 };
+export const userData = async (uid) => {
+  try {
+    const dataRef = doc(db, "users", uid);
+    const docSnapshot = await getDoc(dataRef);
+    if (docSnapshot.exists()) {
+      const docData = { user_id: docSnapshot.id, ...docSnapshot.data() };
+      console.log(docSnapshot, "v", docData);
+
+      // const docData = docSnapshot.data();
+      return docData;
+    } else {
+      console.error("Document does not exist");
+      return null;
+    }
+  } catch (error) {
+    console.log("userData", error);
+  }
+};
 export default createUser;
