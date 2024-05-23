@@ -3,8 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../Store/Slice/cart-slice";
+import { CartData, userData } from "../fb/firebaseFunctions";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProductsCard(product) {
+  const [userDetail, setuserDetail] = useState();
+  const navigate = useNavigate();
+  let uid = localStorage.getItem("uid");
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state);
   // const product = {
@@ -14,12 +20,28 @@ function ProductsCard(product) {
   // };
 
   const handleAdd = () => {
-    dispatch(addToCart(product));
+    if (uid != null) {
+      dispatch(addToCart(product));
+      CartData(uid, product);
+    } else {
+      navigate("/login");
+    }
   };
   const handleRemove = () => {
     dispatch(removeFromCart(product.id));
     console.log("ansflahdfkn");
   };
+
+  async function profileDetail() {
+    if (uid != null) {
+      const userProfile = await userData(uid);
+      Promise.resolve();
+      setuserDetail(userProfile);
+    }
+  }
+  useEffect(() => {
+    profileDetail();
+  }, []);
   return (
     <>
       <div className="flex flex-1 flex-col w-full max-sm:w-full  px-8">

@@ -71,4 +71,13 @@ export const userData = async (uid) => {
     console.log("userData", error);
   }
 };
+export const CartData = async (uid, cartitems) => {
+  try {
+    const dataRef = doc(db, "cart", uid);
+    const cartRes = await setDoc(dataRef, cartitems);
+    console.log("cartRes", cartRes);
+  } catch (error) {
+    console.log("userData", error);
+  }
+};
 export default createUser;
