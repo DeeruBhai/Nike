@@ -6,6 +6,8 @@ import Speacialoffers from "./Sections/Speacialoffers";
 import Subscribe from "./Sections/Subscribe";
 import CustomerReview from "./Sections/CustomerReview";
 import SuperQuality from "./Sections/SuperQuality";
+import Login from "./Sections/Login";
+import Signup from "./Sections/Signup";
 function FronPage() {
   return (
     <main className="relative">
@@ -30,6 +32,12 @@ function FronPage() {
       <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
       </section>
+      {/* <section className="padding-x sm:py-32 py-16 w-full">
+        <Login />
+      </section>
+      <section className="padding-x sm:py-32 py-16 w-full">
+        <Signup />
+      </section> */}
     </main>
   );
 }

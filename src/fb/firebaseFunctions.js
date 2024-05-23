@@ -26,7 +26,8 @@ const createUser = async (email, pass, Uname) => {
 export const loginUser = async (email, pass) => {
   try {
     const createResponse = await signInWithEmailAndPassword(auth, email, pass);
-    console.log("User Logged in!", createResponse);
+    console.log("User Logged in!"); //, createResponse
+    return createResponse.user;
   } catch (error) {
     console.log("login error", error);
   }
